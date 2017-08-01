@@ -1,8 +1,9 @@
 @extends('layouts.app')
 @section('content')
+<div class="container">
 <div class="row">
 	<center><h1>data orang tua</h1></center>
-	<div class="panel panel-primery">
+	<div class="panel panel-primary">
 		<div class="panel-heading"> data orangtua
 		<div class="panel-title pull-right"><a href="{{URL::previous()}}">kembali</a>
 		</div>
@@ -32,7 +33,7 @@
 				<textarea class="form-control" name="e" required="">{{$ortu->alamat}}</textarea>
 			</div>
 			<div class="form-group">
-				<button type="submit" class="btn btn-succes">simpan</button>
+				<button type="submit" class="btn btn-success">simpan</button>
 				<button type="reset" class="btn btn-danger">reset</button>
 			</div>
 			</form>

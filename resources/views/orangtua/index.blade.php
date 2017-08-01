@@ -3,9 +3,10 @@
 <div class="container">
 <div class="row">
 	<center><h1>data orang tua</h1></center>
-	<div class="panel panel-primery">
+	<div class="panel panel-primary">
 		<div class="panel-heading"> data orangtua
 		<div class="panel-title pull-right"><a href="/orangtua/create">tambah data</a>
+		</div>
 		</div>
 		<div class="panel-body">
 			<table class="table">

@@ -29,7 +29,7 @@ Route::get('/abour', 'MyController@tampilan');
 Route::get('/ortu', 'MyController@model');
 Route::get('/budak', 'MyController@model1');
 Route::resource('orangtua','orangtuacontroller');
-
+Route::resource('anak','anakcontroller');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
