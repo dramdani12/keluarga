@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateBudaksTable extends Migration
+class CreateBooksTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,13 @@ class CreateBudaksTable extends Migration
      */
     public function up()
     {
-        Schema::create('budaks', function (Blueprint $table) {
+        Schema::create('books', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nama');
-            $table->integer('ortu_id')->unsigned();
-            $table->foreign('ortu_id')->references('id')->on('ortus')->onUpdate('cascade')->onDelete('cascade');
-            $table->string('umur');
-            $table->text('alamat');
+            $table->string('title');
+            $table->integer('author_id')->unsigned();
+            $table->foreign('author_id')->references('id')->on('authors')->onUpdate('cascade')->onDelete('cascade');
+            $table->string('amount');
+            $table->string('cover')->nullable();
             $table->timestamps();
         });
     }
@@ -31,6 +31,6 @@ class CreateBudaksTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('budaks');
+        Schema::dropIfExists('books');
     }
 }

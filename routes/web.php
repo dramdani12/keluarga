@@ -29,6 +29,8 @@ Route::get('/abour', 'MyController@tampilan');
 Route::get('/ortu', 'MyController@model');
 Route::get('/budak', 'MyController@model1');
 Route::resource('orangtua','orangtuacontroller');
+Route::resource('author','authorcontroller');
+Route::resource('book','bookcontroller');
 Route::resource('anak','anakcontroller');
 Auth::routes();
 
