@@ -50,7 +50,7 @@ class bookcontroller extends Controller
             $filename=str_random(6). '.' .$extension;
             $destinationPath=public_path() .
             DIRECTORY_SEPARATOR . 'img';
-            $books->move($destinationPath ,$filname);
+            $books->move($destinationPath ,$filename);
             $book->cover=$filename;
         }
         $book->save();
@@ -82,7 +82,7 @@ class bookcontroller extends Controller
         //
         $book=book::findOrFail($id);
          $author=author::all();
-        return view('book.edit',compact('book','auther'));
+        return view('book.edit',compact('book','author'));
     }
 
     /**
@@ -105,7 +105,7 @@ class bookcontroller extends Controller
             $filename=str_random(6). '.' .$extension;
             $destinationPath=public_path() .
             DIRECTORY_SEPARATOR . 'img';
-            $books->move($destinationPath ,$filname);
+            $books->move($destinationPath ,$filename);
             $book->cover=$filename;
         }
         $book->save();

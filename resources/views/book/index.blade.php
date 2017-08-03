@@ -26,7 +26,7 @@
 						<td>{{$data->author->nama}}</td>
 						<td>{{$data->amount}}</td>
 						<td>
-						<img src="{{asset('/img/'.$data->cover.'')}}" height="100px" width="100px">
+						<img src="{{asset('/img/'.$data->cover.'')}}" height="100px" width="100px"></td><td>
 							<a class="btn btn-warning" href="/book/{{$data->id}}/edit">Edit</a>
 						</td>
 						<td>
